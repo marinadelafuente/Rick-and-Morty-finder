@@ -13,11 +13,12 @@ class App extends React.Component {
     this.state = {
       characters: [],
       search: "",
-      status: "Alive"
+      status: ""
     }
     this.renderCharacterDetail = this.renderCharacterDetail.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleFilterStatus = this.handleFilterStatus.bind(this);
+    this.filterCharacters = this.filterCharacters.bind(this);
     this.filterCharacters = this.filterCharacters.bind(this);
   }
 
@@ -41,9 +42,15 @@ class App extends React.Component {
   filterCharacters() {
     return this.state.characters
       .filter((character) => {
+        console.log(character.status)
+        // return character.name.toLowerCase().includes(this.state.search.toLowerCase()) &
+        //   character.status.includes((this.state.status))
+
+        // character.status.includes((this.state.status));
         // console.log(character.name, this.state.search, character.name.includes(this.state.search))
-        return character.name.toLowerCase().includes(this.state.search.toLowerCase()) &
-          character.status.includes((this.state.status));
+        return character.status === "Select"
+          ? character.name.toLowerCase().includes(this.state.search.toLowerCase())
+          : character.name.toLowerCase().includes(this.state.search.toLowerCase()) & character.status.includes((this.state.status))
       })
   }
 
@@ -64,6 +71,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.status)
     return (
       <div className="App">
         <Header />
@@ -71,6 +79,7 @@ class App extends React.Component {
           <Route exact path='/'>
             <Filter handleSearch={this.handleSearch}
               handleFilterStatus={this.handleFilterStatus}
+              status={this.state.status}
             />
             <CharacterList characters={this.filterCharacters()}
             />

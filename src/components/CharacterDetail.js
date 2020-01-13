@@ -13,12 +13,12 @@ function CharacterDetail(props) {
                 <p>I am
                     {species === "Alien"
                         ? <span> an {species} <i className={"fab fa-reddit-alien"}></i></span>
-                        : <span>{species}<i className={"fas fa-baby"}></i></span>
+                        : <span> {species} <i className={"fas fa-baby"}></i></span>
                     }
                 </p>
                 <p>I am from {origin.name === "unknown"
                     ? <span>somewhere in the universe</span>
-                    : <span>{status}</span>}
+                    : <span>{origin.name}</span>}
                 </p>
                 <p>I appear in {episode.length} episode(s)</p>
                 <p>Alive, Dead or Who Knows:  {status === "Dead"
