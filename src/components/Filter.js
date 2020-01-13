@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/Filter.scss';
 
 function Filter(props) {
     console.log(props)
@@ -8,9 +9,9 @@ function Filter(props) {
         props.handleSearch(value)
     }
     return (
-        <form>
-            <label htmlFor="search">Find you character </label>
-            <input type="text" name="search" id="search" placeholder="Name of the character" onChange={handleSearch}></input>
+        <form className="form">
+            <label htmlFor="search" className="form-label">Find your character: </label>
+            <input type="text" className="form-input" name="search" id="search" placeholder="Name of the character" onChange={handleSearch}></input>
         </form>
     )
 }

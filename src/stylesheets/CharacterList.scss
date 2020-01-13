@@ -1,0 +1,22 @@
+.list__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 3rem;
+
+    :hover {
+        background-color: rgb(57, 127, 160);
+    }
+}
+
+
+@media all and (min-width: 768px) {
+    .list__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+
+    }
+}

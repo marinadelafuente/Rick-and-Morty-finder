@@ -1,0 +1,38 @@
+.list__item {
+    padding: 0.5rem;
+    background-color: rgba(105, 100, 100, 0.336);
+    margin: 0.8rem;
+    border-radius: 1rem;
+    color: white;
+    list-style: none;
+}
+
+.list__item-image {
+    width: 12rem;
+    padding-bottom: 0.8rem;
+}
+
+.list__item-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+}
+
+.list__item-species {
+    font-size: 1.3rem;
+}
+
+@media all and (min-width: 768px) {
+
+    .list__item-image {
+        width: 21rem;
+    }
+
+    .list__item-name {
+        font-size: 1.5rem;
+    }
+
+    .list__item-species {
+        font-size: 1.5rem;
+    }
+}
