@@ -28,7 +28,7 @@ function CharacterDetail(props) {
                         </p>
                         <p className="character__text">I appear in {episode.length} episode(s)</p>
                         <p className="character__text">I am {status === "Dead"
-                            ? <span className="character__text"><i className={"fas fa-book-dead"}></i></span>
+                            ? <span className="character__text"><i className={"fas fa-skull-crossbones"}></i></span>
                             : <span className="character__text">{status}!</span>}
                         </p>
                     </div>

@@ -3,10 +3,12 @@
     width: 15rem;
     height: 2.5rem;
     cursor: pointer;
+    font-weight: bold;
 
-    :hover {
-        box-shadow: -2px 4px 23px 16px rgba(72, 170, 212, 1);
-        background-color: blue;
+    &:hover {
+        box-shadow: 0px 1px 11px 10px rgba(255, 255, 255, 1);
+        background-color: rgb(100, 179, 231);
+
     }
 }
 
@@ -59,7 +61,8 @@
     color: royalblue;
 }
 
-.fa-book-dead {
+.fa-skull-crossbones {
     font-size: 1.4rem;
-    color: black;
+    color: rgb(29, 28, 28);
+    text-shadow: 0.2px 0.7px 2px white;
 }
