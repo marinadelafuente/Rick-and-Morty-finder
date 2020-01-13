@@ -13,12 +13,9 @@ class App extends React.Component {
     this.state = {
       characters: [],
       search: "",
-      status: ""
     }
     this.renderCharacterDetail = this.renderCharacterDetail.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleFilterStatus = this.handleFilterStatus.bind(this);
-    this.filterCharacters = this.filterCharacters.bind(this);
     this.filterCharacters = this.filterCharacters.bind(this);
   }
 
@@ -34,23 +31,11 @@ class App extends React.Component {
     this.setState({ search: dataValue })
   }
 
-  handleFilterStatus(dataValue) {
-    console.log(dataValue);
-    this.setState({ status: dataValue })
-  }
-
   filterCharacters() {
     return this.state.characters
       .filter((character) => {
         console.log(character.status)
-        // return character.name.toLowerCase().includes(this.state.search.toLowerCase()) &
-        //   character.status.includes((this.state.status))
-
-        // character.status.includes((this.state.status));
-        // console.log(character.name, this.state.search, character.name.includes(this.state.search))
-        return character.status === "Select"
-          ? character.name.toLowerCase().includes(this.state.search.toLowerCase())
-          : character.name.toLowerCase().includes(this.state.search.toLowerCase()) & character.status.includes((this.state.status))
+        return character.name.toLowerCase().includes(this.state.search.toLowerCase())
       })
   }
 
