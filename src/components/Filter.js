@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/Filter.scss';
 
 function Filter(props) {
     console.log(props)
@@ -12,17 +13,20 @@ function Filter(props) {
         props.handleFilterStatus(value)
     }
     return (
-        <form>
-            <label htmlFor="search">Find you character </label>
-            <input type="text" name="search" id="search" placeholder="Name of the character" onChange={handleSearch}></input>
-            <label htmlFor="status">Alive, Dead or Who Knows:</label>
-            <select value={props.status} id="status" name="status" onChange={handleFilterStatus}>
-                <option value="Select">Select</option>
-                <option value="Alive">Alive</option>
-                <option value="Dead">Dead</option>
-                <option value="unknown">Unknown</option>
-
-            </select>
+        <form className="form">
+            <div>
+                <label htmlFor="search" className="form-label">Find your character: </label>
+                <input type="text" className="form-input" name="search" id="search" placeholder="Name of the character" onChange={handleSearch}></input>
+            </div>
+            <div>
+                <label htmlFor="status" className="select-label">Alive, Dead or Who Knows:</label>
+                <select value={props.status} className="select-input" id="status" name="status" onChange={handleFilterStatus}>
+                    <option value="Select">Select</option>
+                    <option value="Alive">Alive</option>
+                    <option value="Dead">Dead</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
         </form>
 
 

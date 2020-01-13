@@ -1,0 +1,65 @@
+.button-return {
+    margin-bottom: 3rem;
+    width: 15rem;
+    height: 2.5rem;
+    cursor: pointer;
+
+    :hover {
+        box-shadow: -2px 4px 23px 16px rgba(72, 170, 212, 1);
+        background-color: blue;
+    }
+}
+
+.character__card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.character__container {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    background-color: rgb(77, 18, 18);
+    height: 24rem;
+    width: 39rem;
+    text-align: left;
+
+}
+
+.character__img {
+    width: 19rem;
+    height: 22rem;
+    margin: 1rem;
+    box-shadow: -2px 4px 33px 12px rgba(0, 0, 0, 0.75);
+}
+
+.character__container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+}
+
+.character__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.character__text {
+    font-size: 1.3rem;
+}
+
+.fab,
+.fas {
+    font-size: 1.4rem;
+    color: royalblue;
+}
+
+.fa-book-dead {
+    font-size: 1.4rem;
+    color: black;
+}

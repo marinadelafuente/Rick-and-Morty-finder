@@ -1,0 +1,31 @@
+.form {
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+    &-label {
+        padding-right: 1rem;
+        font-size: 1.6rem;
+    }
+
+    &-input {
+        width: 24rem;
+        height: 3rem;
+        margin-right: 4rem;
+    }
+}
+
+.select {
+
+    &-label {
+        padding-right: 1rem;
+        font-size: 1.5rem;
+    }
+
+    &-input {
+        width: 10rem;
+        height: 3rem;
+    }
+}

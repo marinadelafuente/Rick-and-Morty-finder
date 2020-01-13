@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../stylesheets/CharacterCard.scss';
+
 
 function CharacterCard(props) {
     // console.log(props.character)
@@ -7,11 +9,11 @@ function CharacterCard(props) {
     const routeId = `/character/${id}`;
     return (
         <React.Fragment>
-            <li key={id}>
+            <li key={id} className="list__item">
                 <Link to={routeId}>
-                    <img src={image}></img>
-                    <p>Name:{name}</p>
-                    <p>Species:{species}</p>
+                    <img src={image} alt={name} className="list__item-image"></img>
+                    <p className="list__item-name">{name.toUpperCase()}</p>
+                    <p className="list__item-species">{species}</p>
                 </Link>
             </li>
         </React.Fragment >
