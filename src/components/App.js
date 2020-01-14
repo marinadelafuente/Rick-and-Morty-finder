@@ -56,7 +56,7 @@ class App extends React.Component {
       return character.id === routeId;
     })
     if (!character) {
-      return <p className="unfind-character">Tu personaje no existe en este universo...</p>
+      return <p className="unfound-character">Tu personaje no existe en este universo...</p>
     }
     else {
       return <CharacterDetail character={character} />

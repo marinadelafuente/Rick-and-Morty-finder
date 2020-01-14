@@ -7,14 +7,16 @@ function CharacterList(props) {
     const { characters } = props;
     // console.log(characters)
     return (
-        < ul className="list__wrapper">
-            {characters.map((character) => {
-                return <CharacterCard
-                    key={character.id}
-                    character={character}
-                />
-            })}
-        </ul >
+        characters.length === 0
+            ? (<p className="unfound-character">Tu personaje no existe en este universo...</p>)
+            : (< ul className="list__wrapper">
+                {characters.map((character) => {
+                    return <CharacterCard
+                        key={character.id}
+                        character={character}
+                    />
+                })}
+            </ul >)
     )
 };
 
