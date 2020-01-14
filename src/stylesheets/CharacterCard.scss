@@ -6,19 +6,36 @@
     color: white;
     list-style: none;
 
+    &:hover {
+        background-color: rgb(57, 127, 160);
+        box-shadow: -3px 0px 16px -3px rgba(157, 218, 232, 1);
+    }
+
 
     &-image {
         width: 10rem;
         padding-bottom: 0.8rem;
+
+        :hover {
+            box-shadow: none;
+        }
     }
 
     &-name {
         margin-bottom: 0.6rem;
         font-weight: bold;
+
+        :hover {
+            box-shadow: none;
+        }
     }
 
     &-species {
         font-size: 1.3rem;
+
+        :hover {
+            box-shadow: none;
+        }
     }
 
 }
