@@ -11,7 +11,7 @@ function CharacterDetail(props) {
         statusNew = <i className={"fas fa-skull-crossbones"}></i>
     }
     else if (status === "unknown") {
-        statusNew = <p className="character__text">Am I alive??</p>
+        statusNew = <p className="character__text">Am I alive?? <span className="icon">🤷‍♀️</span></p>
     }
     else {
         statusNew = <p className="character__text">I am {status.toUpperCase()}!!! <i class="fas fa-walking"></i> <i class="fas fa-child"></i> <i class="fas fa-walking"></i></p>

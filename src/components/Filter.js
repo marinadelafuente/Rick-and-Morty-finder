@@ -26,7 +26,7 @@ function Filter(props) {
                     <option value="">Select</option>
                     <option value="Alive">Alive</option>
                     <option value="Dead">Dead</option>
-                    <option value="unknown">Unknown</option>
+                    <option value="unknown">Who Knows</option>
                 </select>
             </div>
         </form>
