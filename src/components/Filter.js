@@ -7,15 +7,17 @@ function Filter(props) {
         // console.log(ev.target.value)
         const value = ev.target.value;
         props.handleSearch(value)
-        ev.preventDefault();
     }
     const handleFilterStatus = (ev) => {
         const value = ev.target.value;
         props.handleFilterStatus(value)
+    }
+    const handleSubmit = (ev) => {
         ev.preventDefault();
     }
+
     return (
-        <form className="form">
+        <form onSubmit={handleSubmit} className="form">
             <div className="form-container-input">
                 <label htmlFor="search" className="form-label">Find your character: </label>
                 <input type="text" className="form-input" name="search" id="search" placeholder="Name of the character" value={props.search} onChange={handleSearch}></input>
