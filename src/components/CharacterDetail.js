@@ -6,6 +6,17 @@ function CharacterDetail(props) {
     // console.log(props)
     const { image, name, species, origin, episode, status } = props.character;
     // console.log(props.character.name)
+    let statusNew;
+    if (status === "Dead") {
+        statusNew = <i className={"fas fa-skull-crossbones"}></i>
+    }
+    else if (status === "unknown") {
+        statusNew = <p className="character__text">Am I alive??</p>
+    }
+    else {
+        statusNew = <p className="character__text">I am {status.toUpperCase()}!!! <i class="fas fa-walking"></i> <i class="fas fa-child"></i> <i class="fas fa-walking"></i></p>
+    };
+
     return (
         <React.Fragment>
             <div className="character__card-container">
@@ -18,8 +29,8 @@ function CharacterDetail(props) {
                         <h3 className="character__title">{name.toUpperCase()}</h3>
                         <p className="character__text">I am
                     {species === "Alien"
-                                ? <span className="character__text"> an {species} <i className={"fab fa-reddit-alien"}></i></span>
-                                : <span className="character__text"> {species} <i className={"fas fa-baby"}></i></span>
+                                ? <span className="character__text"> an <i className={"fab fa-reddit-alien"}></i> ({species}) </span>
+                                : <span className="character__text"> {species} 🤓</span>
                             }
                         </p>
                         <p className="character__text">I am from {origin.name === "unknown"
@@ -27,10 +38,11 @@ function CharacterDetail(props) {
                             : <span className="character__text">{origin.name}</span>}
                         </p>
                         <p className="character__text">I appear in {episode.length} episode(s)</p>
-                        <p className="character__text">I am {status === "Dead"
+                        {statusNew}
+                        {/* <p className="character__text">I am {status === "Dead"
                             ? <span className="character__text"><i className={"fas fa-skull-crossbones"}></i></span>
                             : <span className="character__text">{status}!</span>}
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>

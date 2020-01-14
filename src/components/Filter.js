@@ -7,10 +7,12 @@ function Filter(props) {
         // console.log(ev.target.value)
         const value = ev.target.value;
         props.handleSearch(value)
+        ev.preventDefault();
     }
     const handleFilterStatus = (ev) => {
         const value = ev.target.value;
         props.handleFilterStatus(value)
+        ev.preventDefault();
     }
     return (
         <form className="form">

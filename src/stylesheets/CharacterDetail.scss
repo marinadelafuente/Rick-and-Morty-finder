@@ -8,61 +8,104 @@
     font-size: 1.5rem;
 
     &:hover {
-        box-shadow: 0px 1px 11px 10px rgba(255, 255, 255, 1);
-        background-color: rgb(100, 179, 231);
+        box-shadow: 0px 1px 11px 6px rgba(255, 255, 255, 1);
+        background-color: rgb(168, 247, 22);
     }
 }
 
-.character__card-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+.character {
+    &__card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    &__container {
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        background-color: rgb(25, 187, 216);
+        height: 22rem;
+        width: 33rem;
+        text-align: left;
+    }
+
+    &__img {
+        width: 17.5rem;
+        height: 19.5rem;
+        margin: 1rem;
+        box-shadow: -2px 4px 33px 12px rgba(0, 0, 0, 0.75);
+    }
+
+    &__container-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 1rem;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: 0.2rem;
+        text-decoration: underline;
+        text-shadow: 0.2px 0.7px 0.5px rgb(17, 16, 16);
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
 }
 
-.character__container {
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    background-color: rgb(77, 18, 18);
-    height: 24rem;
-    width: 39rem;
-    text-align: left;
-}
-
-.character__img {
-    width: 19.5rem;
-    height: 21.5rem;
-    margin: 1rem;
-    box-shadow: -2px 4px 33px 12px rgba(0, 0, 0, 0.75);
-}
-
-.character__container-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 1rem;
-}
-
-.character__title {
-    font-size: 2.2rem;
-    margin-bottom: 0.2rem;
-    text-decoration: underline;
-}
-
-.character__text {
-    font-size: 1.6rem;
-}
-
-.fab,
-.fas {
-    font-size: 1.4rem;
-    color: royalblue;
+.fa-reddit-alien {
+    font-size: 2.4rem;
+    color: rgb(3, 36, 44);
+    text-shadow: 0.2px 0.7px 0.5px white;
 }
 
 .fa-skull-crossbones {
     font-size: 1.4rem;
     color: rgb(29, 28, 28);
     text-shadow: 0.2px 0.7px 2px white;
+}
+
+.fa-walking {
+    color: rgb(134, 29, 29);
+    text-shadow: 0.2px 0.7px 2px white;
+    font-size: 2rem;
+}
+
+.fa-child {
+    color: rgb(12, 12, 11);
+    text-shadow: 0.2px 0.7px 2px white;
+    font-size: 2.3rem;
+}
+
+
+@media all and (min-width: 768px) {
+    .character {
+        &__container {
+            width: 45rem;
+            height: 23.5rem;
+        }
+
+        &__img {
+            width: 19.5rem;
+            height: 21.5rem;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+        }
+    }
+
+    .fa-walking {
+        font-size: 2.7rem;
+    }
 }
