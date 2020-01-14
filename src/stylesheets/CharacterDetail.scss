@@ -4,11 +4,12 @@
     height: 2.5rem;
     cursor: pointer;
     font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
 
     &:hover {
         box-shadow: 0px 1px 11px 10px rgba(255, 255, 255, 1);
         background-color: rgb(100, 179, 231);
-
     }
 }
 
@@ -24,17 +25,15 @@
     color: white;
     display: flex;
     justify-content: flex-start;
-    // align-items: flex-start;
     background-color: rgb(77, 18, 18);
     height: 24rem;
     width: 39rem;
     text-align: left;
-
 }
 
 .character__img {
-    width: 19rem;
-    height: 22rem;
+    width: 19.5rem;
+    height: 21.5rem;
     margin: 1rem;
     box-shadow: -2px 4px 33px 12px rgba(0, 0, 0, 0.75);
 }
@@ -47,12 +46,13 @@
 }
 
 .character__title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+    text-decoration: underline;
 }
 
 .character__text {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 .fab,

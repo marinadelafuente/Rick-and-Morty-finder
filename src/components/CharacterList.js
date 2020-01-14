@@ -5,7 +5,7 @@ import '../stylesheets/CharacterList.scss';
 function CharacterList(props) {
     // console.log(props)
     const { characters } = props;
-    console.log(characters)
+    // console.log(characters)
     return (
         < ul className="list__wrapper">
             {characters.map((character) => {

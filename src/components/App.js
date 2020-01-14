@@ -30,27 +30,20 @@ class App extends React.Component {
   };
 
   handleSearch(dataValue) {
-    console.log(dataValue);
+    // console.log(dataValue);
     this.setState({ search: dataValue })
   }
 
   handleFilterStatus(dataValue) {
-    console.log(dataValue);
+    // console.log(dataValue);
     this.setState({ status: dataValue })
   }
 
   filterCharacters() {
     return this.state.characters
       .filter((character) => {
-        console.log(character.status)
-        // return character.name.toLowerCase().includes(this.state.search.toLowerCase()) &
-        //   character.status.includes((this.state.status))
-
-        // character.status.includes((this.state.status));
-        // console.log(character.name, this.state.search, character.name.includes(this.state.search))
-        return character.status === "Select"
-          ? character.name.toLowerCase().includes(this.state.search.toLowerCase())
-          : character.name.toLowerCase().includes(this.state.search.toLowerCase()) & character.status.includes((this.state.status))
+        // console.log(character.status)
+        return character.name.toLowerCase().includes(this.state.search.toLowerCase()) & character.status.includes(this.state.status)
       })
   }
 
@@ -59,11 +52,11 @@ class App extends React.Component {
     // console.log(props)
     // console.log(this.state.characters, routeId);
     const character = this.state.characters.find((character) => {
-      console.log(character.id, routeId);
+      // console.log(character.id, routeId);
       return character.id === routeId;
     })
     if (!character) {
-      return <p>Tu personaje no existe en este universo...</p>
+      return <p className="unfind-character">Tu personaje no existe en este universo...</p>
     }
     else {
       return <CharacterDetail character={character} />
@@ -80,6 +73,7 @@ class App extends React.Component {
             <Filter handleSearch={this.handleSearch}
               handleFilterStatus={this.handleFilterStatus}
               status={this.state.status}
+              search={this.state.search}
             />
             <CharacterList characters={this.filterCharacters()}
             />

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import '../stylesheets/CharacterDetail.scss';
 
 function CharacterDetail(props) {
-    console.log(props)
+    // console.log(props)
     const { image, name, species, origin, episode, status } = props.character;
-    console.log(props.character.name)
+    // console.log(props.character.name)
     return (
         <React.Fragment>
             <div className="character__card-container">

@@ -5,34 +5,39 @@
     border-radius: 1rem;
     color: white;
     list-style: none;
-}
 
-.list__item-image {
-    width: 12rem;
-    padding-bottom: 0.8rem;
-}
 
-.list__item-name {
-    font-size: 1.4rem;
-    margin-bottom: 0.6rem;
-    font-weight: bold;
-}
+    &-image {
+        width: 10rem;
+        padding-bottom: 0.8rem;
+    }
 
-.list__item-species {
-    font-size: 1.3rem;
+    &-name {
+        // font-size: 3rem;
+        margin-bottom: 0.6rem;
+        font-weight: bold;
+    }
+
+    &-species {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media all and (min-width: 768px) {
 
-    .list__item-image {
-        width: 21rem;
-    }
+    .list__item {
 
-    .list__item-name {
-        font-size: 1.5rem;
-    }
+        &-image {
+            width: 21rem;
+        }
 
-    .list__item-species {
-        font-size: 1.5rem;
+        &-name {
+            font-size: 2rem;
+        }
+
+        &-species {
+            font-size: 1.6rem;
+        }
     }
 }

@@ -1,9 +1,16 @@
 .form {
     color: white;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin: 3rem auto 1rem auto;
     display: flex;
     justify-content: center;
+
+    &-container-input {
+        margin-left: 0.8rem;
+    }
+
+    &-container-select {
+        margin-right: 0.8rem;
+    }
 
     &-label {
         padding-right: 1rem;
@@ -11,11 +18,11 @@
     }
 
     &-input {
-        width: 20rem;
+        width: 16rem;
         height: 3rem;
         margin-right: 4rem;
         margin-top: 1rem;
-
+        box-shadow: -3px 0px 22px -1px rgba(157, 218, 232, 1);
     }
 }
 
@@ -27,18 +34,21 @@
     }
 
     &-input {
-        width: 10rem;
+        width: 6rem;
         height: 3rem;
         margin-top: 1rem;
+        box-shadow: -3px 0px 22px -1px rgba(157, 218, 232, 1);
     }
 }
 
 @media all and (min-width: 768px) {
     .form-input {
+        width: 20rem;
         margin-top: 0rem;
     }
 
     .select-input {
+        width: 8rem;
         margin-top: 0rem;
     }
 }
